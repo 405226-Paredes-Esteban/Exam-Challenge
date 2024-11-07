@@ -1,1 +1,24 @@
-<p>order-list works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Codigo de Orden</th>
+        <th scope="col">Cliente</th>
+        <th scope="col">Email</th>
+        <th scope="col">Productos</th>
+        <th scope="col">Fecha de Compra</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for (o of orders; track $index) {
+            <tr>
+                <th>{{o.id}}</th>
+                <td>{{o.customerName}}</td>
+                <td>{{o.email}}</td>
+                <td>{{o.products.length}} item/s</td>
+                <td>{{o.timeStamp | date: 'dd/MM/yyyy'}}</td>
+                <td>{{o.total}}</td>
+            </tr>
+        }
+    </tbody>
+  </table>

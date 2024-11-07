@@ -1,11 +1,11 @@
-import { Product } from "./product";
+import { ProductOrder } from "./productOrder";
 
 export interface Order{
-    id: number,
-    customerName: string,
-    email: string,
-    products: Product[],
-    total: number,
-    orderCode: string,
-    timestamp: Date
+    id:string,
+    customerName:string,
+    email:string,
+    products:ProductOrder[],
+    total:number,
+    orderCode:string,
+    timeStamp: Date
 }
