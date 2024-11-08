@@ -6,6 +6,7 @@ import { OrderService } from '../../services/order.service';
 import { Order } from '../../models/order';
 import { Router } from '@angular/router';
 import { catchError, map, Observable, of } from 'rxjs';
+import { ProductOrder } from '../../models/productOrder';
 
 
 @Component({
@@ -25,7 +26,7 @@ export class OrderFormComponent implements OnInit {
   orderForm:FormGroup = new FormGroup({
     name:new FormControl('',[Validators.required,Validators.minLength(3)]),
     email:new FormControl('',[Validators.required, Validators.email],[this.emailOrdenesValidator()]),
-    products: new FormArray([])
+    products: new FormArray([],[Validators.minLength(1),this.repetidoValidator])
   });
   selectedProduct: Product| undefined;
 
@@ -36,7 +37,7 @@ export class OrderFormComponent implements OnInit {
   addProduct(){
       this.products.push(new FormGroup({
         productId:new FormControl(),
-        quantity: new FormControl(0, [Validators.required,Validators.min(1)]),
+        quantity: new FormControl(0, [Validators.required]),
         stock:new FormControl(),
         price: new FormControl()
       }));
@@ -121,5 +122,14 @@ export class OrderFormComponent implements OnInit {
         catchError(() => of(null))
       );
     };
+  }
+
+  repetidoValidator(arr:AbstractControl) : ValidationErrors | null{
+    let products:ProductOrder[] = arr.value;
+    const uniqueValues = new Set(products.map(p => p.productId));
+    if(products.length>uniqueValues.size){
+      return {productoRepetido : true}
+    }
+    return null;
   }
 }

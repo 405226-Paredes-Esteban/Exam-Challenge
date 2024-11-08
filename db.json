@@ -147,6 +147,94 @@
       "total": 0,
       "orderCode": "E.comThu Nov 07 2024",
       "timeStamp": "2024-11-07T15:03:15.848Z"
+    },
+    {
+      "id": "",
+      "customerName": "Esteban",
+      "email": "esf@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 18,
+          "stock": 50,
+          "price": 999.99
+        },
+        {
+          "productId": "1",
+          "quantity": 120,
+          "stock": 50,
+          "price": 999.99
+        }
+      ],
+      "total": 124198.758,
+      "orderCode": "E.comThu Nov 07 2024",
+      "timeStamp": "2024-11-08T02:35:00.252Z"
+    },
+    {
+      "id": "",
+      "customerName": "Esteban",
+      "email": "esf@gmail.com",
+      "products": [
+        {
+          "productId": "2",
+          "quantity": 1,
+          "stock": 100,
+          "price": 699.99
+        },
+        {
+          "productId": "2",
+          "quantity": 4,
+          "stock": 100,
+          "price": 699.99
+        }
+      ],
+      "total": 3149.955,
+      "orderCode": "E.comThu Nov 07 2024",
+      "timeStamp": "2024-11-08T02:37:06.209Z"
+    },
+    {
+      "id": "",
+      "customerName": "Esteban",
+      "email": "esf@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 10,
+          "stock": 50,
+          "price": 999.99
+        },
+        {
+          "productId": "1",
+          "quantity": 2,
+          "stock": 50,
+          "price": 999.99
+        }
+      ],
+      "total": 10799.892,
+      "orderCode": "E.comThu Nov 07 2024",
+      "timeStamp": "2024-11-08T02:49:09.678Z"
+    },
+    {
+      "id": "",
+      "customerName": "Esteban",
+      "email": "esf@gmail.com",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 20,
+          "stock": 50,
+          "price": 999.99
+        },
+        {
+          "productId": "2",
+          "quantity": 10,
+          "stock": 100,
+          "price": 699.99
+        }
+      ],
+      "total": 24299.73,
+      "orderCode": "E.comThu Nov 07 2024",
+      "timeStamp": "2024-11-08T02:51:38.347Z"
     }
   ]
 }
